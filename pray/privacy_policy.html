@@ -23,50 +23,175 @@
 
     <style type="text/css">
         @media (prefers-color-scheme: dark) {
-            .contentCss{ background:  #000000; color: white; }
-            .hrefCss{ color: #317AF7; }
+            .contentCss {
+                background: #000000;
+                color: white;
+            }
+
+            .hrefCss {
+                color: #317AF7;
+            }
         }
     </style>
+    <script>
+        const languages = {
+            "zh-CN": {
+                title: "敲木鱼 App 隐私政策",
+                intro: "本隐私政策旨在帮助您了解敲木鱼 App（以下简称“本 App”）如何收集、使用和保护您的个人信息。请您仔细阅读本隐私政策，在使用本 App 前确认您已充分理解并同意本隐私政策的内容。如您不同意本隐私政策的任何条款，可能无法正常使用本 App 的部分或全部功能。",
+                collected_info_title: "一、我们收集的信息",
+                collected_info_content: "我们仅收集为实现敲木鱼计数、播放音效和振动功能所必要的信息：",
+                collected_info_1: "使用信息：我们会记录您在使用敲木鱼功能时的计数数据，这些数据仅用于提供计数服务，帮助您了解敲木鱼的次数。",
+                collected_info_2: "设备信息：为了确保 App 能正常运行并提供音效和振动功能，我们可能会收集您的设备型号、操作系统版本等信息。这些信息仅用于优化 App 的性能和兼容性。",
+                use_info_title: "二、我们如何使用您的信息",
+                use_info_content: "我们收集您的信息主要用于以下目的：",
+                use_info_1: "提供服务：根据您敲木鱼的操作，准确记录计数，播放相应的音效，并触发振动反馈。",
+                use_info_2: "优化体验：分析使用信息和设备信息，不断改进 App 的功能和性能，为您提供更好的使用体验。",
+                share_info_title: "三、我们如何共享、转让和披露您的信息",
+                share_info_content: "我们不会将您的个人信息共享、转让或披露给任何第三方，除非在以下情况下：",
+                share_info_1: "获得您的明确同意：在获得您的明确授权后，我们会根据您的指示共享或披露您的信息。",
+                share_info_2: "法律要求：根据法律法规、法律程序的要求或政府主管部门的强制性要求，我们可能需要披露您的信息。",
+                protect_info_title: "四、我们如何保护您的信息",
+                protect_info_content: "我们采用合理的技术和管理措施来保护您的个人信息，防止信息被未经授权的访问、披露、更改或破坏。但请您理解，由于技术的限制和可能存在的各种恶意手段，即使我们尽力采取合理措施保护您的信息，也无法保证信息的绝对安全。",
+                user_rights_title: "五、您的权利",
+                user_rights_content: "您有权随时访问、更正和删除您在本 App 中的使用信息。如果您需要行使这些权利，请通过 App 内的反馈渠道或联系我们的客服团队，我们将在合理的时间内处理您的请求。",
+                policy_update_title: "六、隐私政策的更新",
+                policy_update_content: "我们可能会根据业务发展、法律法规要求等情况对本隐私政策进行更新。更新后的隐私政策将在 App 内公布，您继续使用本 App 即表示您同意接受更新后的隐私政策。",
+                contact_us_title: "七、联系我们",
+                contact_us_content: "如果您对本隐私政策有任何疑问、建议或意见，欢迎通过以下方式联系我们：",
+                email: "邮箱：huamm512@gmail.com"
+            },
+            "zh-TW": {
+                title: "敲木魚 App 隱私政策",
+                intro: "本隱私政策旨在幫助您了解敲木魚 App（以下簡稱「本 App」）如何收集、使用和保護您的個人資訊。請您仔細閱讀本隱私政策，在使用本 App 前確認您已充分理解並同意本隱私政策的內容。如您不同意本隱私政策的任何條款，可能無法正常使用本 App 的部分或全部功能。",
+                collected_info_title: "一、我們收集的資訊",
+                collected_info_content: "我們僅收集為實現敲木魚計數、播放音效和振動功能所必要的資訊：",
+                collected_info_1: "使用資訊：我們會記錄您在使用敲木魚功能時的計數資料，這些資料僅用於提供計數服務，幫助您了解敲木魚的次數。",
+                collected_info_2: "設備資訊：為了確保 App 能正常運行並提供音效和振動功能，我們可能會收集您的設備型號、作業系統版本等資訊。這些資訊僅用於優化 App 的性能和相容性。",
+                use_info_title: "二、我們如何使用您的資訊",
+                use_info_content: "我們收集您的資訊主要用於以下目的：",
+                use_info_1: "提供服務：根據您敲木魚的操作，準確記錄計數，播放相應的音效，並觸發振動回饋。",
+                use_info_2: "優化體驗：分析使用資訊和設備資訊，不斷改進 App 的功能和性能，為您提供更好的使用體驗。",
+                share_info_title: "三、我們如何共享、轉讓和披露您的資訊",
+                share_info_content: "我們不會將您的個人資訊共享、轉讓或披露給任何第三方，除非在以下情況下：",
+                share_info_1: "獲得您的明確同意：在獲得您的明確授權後，我們會根據您的指示共享或披露您的資訊。",
+                share_info_2: "法律要求：根據法律法規、法律程序的要求或政府主管部門的強制性要求，我們可能需要披露您的資訊。",
+                protect_info_title: "四、我們如何保護您的資訊",
+                protect_info_content: "我們採用合理的技術和管理措施來保護您的個人資訊，防止資訊被未經授權的訪問、披露、更改或破壞。但請您理解，由於技術的限制和可能存在的各種惡意手段，即使我們盡力採取合理措施保護您的資訊，也無法保證資訊的絕對安全。",
+                user_rights_title: "五、您的權利",
+                user_rights_content: "您有權隨時訪問、更正和刪除您在本 App 中的使用資訊。如果您需要行使這些權利，請通過 App 內的反饋渠道或聯繫我們的客服團隊，我們將在合理的時間內處理您的請求。",
+                policy_update_title: "六、隱私政策的更新",
+                policy_update_content: "我們可能會根據業務發展、法律法規要求等情況對本隱私政策進行更新。更新後的隱私政策將在 App 內公佈，您繼續使用本 App 即表示您同意接受更新後的隱私政策。",
+                contact_us_title: "七、聯繫我們",
+                contact_us_content: "如果您對本隱私政策有任何疑問、建議或意見，歡迎通過以下方式聯繫我們：",
+                email: "信箱：huamm512@gmail.com"
+            },
+            "en": {
+                title: "Knock the Wooden Fish App Privacy Policy",
+                intro: "This privacy policy is designed to help you understand how the Knock the Wooden Fish App (hereinafter referred to as \"this App\") collects, uses, and protects your personal information. Please read this privacy policy carefully and confirm that you have fully understood and agreed to its content before using this App. If you do not agree to any of the terms of this privacy policy, you may not be able to use some or all of the functions of this App normally.",
+                collected_info_title: "I. Information We Collect",
+                collected_info_content: "We only collect the information necessary to implement the functions of counting the number of times you knock the wooden fish, playing sound effects, and vibration:",
+                collected_info_1: "Usage information: We will record the counting data when you use the function of knocking the wooden fish. These data are only used to provide the counting service and help you understand the number of times you knock the wooden fish.",
+                collected_info_2: "Device information: To ensure that the App can run normally and provide sound effects and vibration functions, we may collect information such as your device model and operating system version. These information are only used to optimize the performance and compatibility of the App.",
+                use_info_title: "II. How We Use Your Information",
+                use_info_content: "We collect your information mainly for the following purposes:",
+                use_info_1: "Provide services: Based on your operation of knocking the wooden fish, accurately record the count, play the corresponding sound effects, and trigger vibration feedback.",
+                use_info_2: "Optimize the experience: Analyze the usage information and device information to continuously improve the functions and performance of the App and provide you with a better user experience.",
+                share_info_title: "III. How We Share, Transfer, and Disclose Your Information",
+                share_info_content: "We will not share, transfer, or disclose your personal information to any third party unless in the following situations:",
+                share_info_1: "Obtain your explicit consent: After obtaining your explicit authorization, we will share or disclose your information according to your instructions.",
+                share_info_2: "Legal requirements: According to laws, regulations, legal procedures, or mandatory requirements of government authorities, we may need to disclose your information.",
+                protect_info_title: "IV. How We Protect Your Information",
+                protect_info_content: "We adopt reasonable technical and management measures to protect your personal information and prevent it from being accessed, disclosed, changed, or destroyed without authorization. However, please understand that due to technological limitations and various possible malicious means, even if we try our best to take reasonable measures to protect your information, we cannot guarantee the absolute security of the information.",
+                user_rights_title: "V. Your Rights",
+                user_rights_content: "You have the right to access, correct, and delete your usage information in this App at any time. If you need to exercise these rights, please contact our customer service team through the feedback channel in the App, and we will process your request within a reasonable time.",
+                policy_update_title: "VI. Updates to the Privacy Policy",
+                policy_update_content: "We may update this privacy policy based on business development, legal requirements, etc. The updated privacy policy will be announced in the App. Your continued use of this App indicates that you agree to accept the updated privacy policy.",
+                contact_us_title: "VII. Contact Us",
+                contact_us_content: "If you have any questions, suggestions, or comments about this privacy policy, please feel free to contact us in the following ways:",
+                email: "Email: huamm512@gmail.com"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.title = languages[lang].title;
+            document.getElementById("intro").innerHTML = languages[lang].intro;
+            document.getElementById("collected_info_title").innerHTML = languages[lang].collected_info_title;
+            document.getElementById("collected_info_content").innerHTML = languages[lang].collected_info_content;
+            document.getElementById("collected_info_1").innerHTML = languages[lang].collected_info_1;
+            document.getElementById("collected_info_2").innerHTML = languages[lang].collected_info_2;
+            document.getElementById("use_info_title").innerHTML = languages[lang].use_info_title;
+            document.getElementById("use_info_content").innerHTML = languages[lang].use_info_content;
+            document.getElementById("use_info_1").innerHTML = languages[lang].use_info_1;
+            document.getElementById("use_info_2").innerHTML = languages[lang].use_info_2;
+            document.getElementById("share_info_title").innerHTML = languages[lang].share_info_title;
+            document.getElementById("share_info_content").innerHTML = languages[lang].share_info_content;
+            document.getElementById("share_info_1").innerHTML = languages[lang].share_info_1;
+            document.getElementById("share_info_2").innerHTML = languages[lang].share_info_2;
+            document.getElementById("protect_info_title").innerHTML = languages[lang].protect_info_title;
+            document.getElementById("protect_info_content").innerHTML = languages[lang].protect_info_content;
+            document.getElementById("user_rights_title").innerHTML = languages[lang].user_rights_title;
+            document.getElementById("user_rights_content").innerHTML = languages[lang].user_rights_content;
+            document.getElementById("policy_update_title").innerHTML = languages[lang].policy_update_title;
+            document.getElementById("policy_update_content").innerHTML = languages[lang].policy_update_content;
+            document.getElementById("contact_us_title").innerHTML = languages[lang].contact_us_title;
+            document.getElementById("contact_us_content").innerHTML = languages[lang].contact_us_content;
+            document.getElementById("email").innerHTML = languages[lang].email;
+        }
+
+        // 页面加载时读取 URL 参数并设置默认语言
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            if (lang && languages[lang]) {
+                changeLanguage(lang);
+            }
+        };
+    </script>
 </head>
 
 <body class="contentCss">
+<div style="position: absolute; top: 10px; right: 10px;">
+    <button onclick="changeLanguage('zh-CN')">简体中文</button>
+    <button onclick="changeLanguage('zh-TW')">繁体中文</button>
+    <button onclick="changeLanguage('en')">English</button>
+</div>
 <h1>敲木鱼 App 隐私政策</h1>
+<p id="intro">本隐私政策旨在帮助您了解敲木鱼 App（以下简称“本 App”）如何收集、使用和保护您的个人信息。请您仔细阅读本隐私政策，在使用本 App 前确认您已充分理解并同意本隐私政策的内容。如您不同意本隐私政策的任何条款，可能无法正常使用本 App 的部分或全部功能。</p>
 
-<p>本隐私政策旨在帮助您了解敲木鱼 App（以下简称“本 App”）如何收集、使用和保护您的个人信息。请您仔细阅读本隐私政策，在使用本 App 前确认您已充分理解并同意本隐私政策的内容。如您不同意本隐私政策的任何条款，可能无法正常使用本 App 的部分或全部功能。</p>
-
-<h2>一、我们收集的信息</h2>
-<p>我们仅收集为实现敲木鱼计数、播放音效和振动功能所必要的信息：</p>
+<h2 id="collected_info_title">一、我们收集的信息</h2>
+<p id="collected_info_content">我们仅收集为实现敲木鱼计数、播放音效和振动功能所必要的信息：</p>
 <ol>
-    <li><strong>使用信息</strong>：我们会记录您在使用敲木鱼功能时的计数数据，这些数据仅用于提供计数服务，帮助您了解敲木鱼的次数。</li>
-    <li><strong>设备信息</strong>：为了确保 App 能正常运行并提供音效和振动功能，我们可能会收集您的设备型号、操作系统版本等信息。这些信息仅用于优化 App 的性能和兼容性。</li>
+    <li id="collected_info_1"><strong>使用信息</strong>：我们会记录您在使用敲木鱼功能时的计数数据，这些数据仅用于提供计数服务，帮助您了解敲木鱼的次数。</li>
+    <li id="collected_info_2"><strong>设备信息</strong>：为了确保 App 能正常运行并提供音效和振动功能，我们可能会收集您的设备型号、操作系统版本等信息。这些信息仅用于优化 App 的性能和兼容性。</li>
 </ol>
 
-<h2>二、我们如何使用您的信息</h2>
-<p>我们收集您的信息主要用于以下目的：</p>
+<h2 id="use_info_title">二、我们如何使用您的信息</h2>
+<p id="use_info_content">我们收集您的信息主要用于以下目的：</p>
 <ol>
-    <li><strong>提供服务</strong>：根据您敲木鱼的操作，准确记录计数，播放相应的音效，并触发振动反馈。</li>
-    <li><strong>优化体验</strong>：分析使用信息和设备信息，不断改进 App 的功能和性能，为您提供更好的使用体验。</li>
+    <li id="use_info_1"><strong>提供服务</strong>：根据您敲木鱼的操作，准确记录计数，播放相应的音效，并触发振动反馈。</li>
+    <li id="use_info_2"><strong>优化体验</strong>：分析使用信息和设备信息，不断改进 App 的功能和性能，为您提供更好的使用体验。</li>
 </ol>
 
-<h2>三、我们如何共享、转让和披露您的信息</h2>
-<p>我们不会将您的个人信息共享、转让或披露给任何第三方，除非在以下情况下：</p>
+<h2 id="share_info_title">三、我们如何共享、转让和披露您的信息</h2>
+<p id="share_info_content">我们不会将您的个人信息共享、转让或披露给任何第三方，除非在以下情况下：</p>
 <ol>
-    <li><strong>获得您的明确同意</strong>：在获得您的明确授权后，我们会根据您的指示共享或披露您的信息。</li>
-    <li><strong>法律要求</strong>：根据法律法规、法律程序的要求或政府主管部门的强制性要求，我们可能需要披露您的信息。</li>
+    <li id="share_info_1"><strong>获得您的明确同意</strong>：在获得您的明确授权后，我们会根据您的指示共享或披露您的信息。</li>
+    <li id="share_info_2"><strong>法律要求</strong>：根据法律法规、法律程序的要求或政府主管部门的强制性要求，我们可能需要披露您的信息。</li>
 </ol>
 
-<h2>四、我们如何保护您的信息</h2>
-<p>我们采用合理的技术和管理措施来保护您的个人信息，防止信息被未经授权的访问、披露、更改或破坏。但请您理解，由于技术的限制和可能存在的各种恶意手段，即使我们尽力采取合理措施保护您的信息，也无法保证信息的绝对安全。</p>
+<h2 id="protect_info_title">四、我们如何保护您的信息</h2>
+<p id="protect_info_content">我们采用合理的技术和管理措施来保护您的个人信息，防止信息被未经授权的访问、披露、更改或破坏。但请您理解，由于技术的限制和可能存在的各种恶意手段，即使我们尽力采取合理措施保护您的信息，也无法保证信息的绝对安全。</p>
 
-<h2>五、您的权利</h2>
-<p>您有权随时访问、更正和删除您在本 App 中的使用信息。如果您需要行使这些权利，请通过 App 内的反馈渠道或联系我们的客服团队，我们将在合理的时间内处理您的请求。</p>
+<h2 id="user_rights_title">五、您的权利</h2>
+<p id="user_rights_content">您有权随时访问、更正和删除您在本 App 中的使用信息。如果您需要行使这些权利，请通过 App 内的反馈渠道或联系我们的客服团队，我们将在合理的时间内处理您的请求。</p>
 
-<h2>六、隐私政策的更新</h2>
-<p>我们可能会根据业务发展、法律法规要求等情况对本隐私政策进行更新。更新后的隐私政策将在 App 内公布，您继续使用本 App 即表示您同意接受更新后的隐私政策。</p>
+<h2 id="policy_update_title">六、隐私政策的更新</h2>
+<p id="policy_update_content">我们可能会根据业务发展、法律法规要求等情况对本隐私政策进行更新。更新后的隐私政策将在 App 内公布，您继续使用本 App 即表示您同意接受更新后的隐私政策。</p>
 
-<h2>七、联系我们</h2>
-<p>如果您对本隐私政策有任何疑问、建议或意见，欢迎通过以下方式联系我们：</p>
-<p>邮箱：huamm512@gmail.com</p>
+<h2 id="contact_us_title">七、联系我们</h2>
+<p id="contact_us_content">如果您对本隐私政策有任何疑问、建议或意见，欢迎通过以下方式联系我们：</p>
+<p id="email">邮箱：huamm512@gmail.com</p>
 
 </body>
 

@@ -23,62 +23,220 @@
 
     <style type="text/css">
         @media (prefers-color-scheme: dark) {
-            .contentCss{ background:  #000000; color: white; }
-            .hrefCss{ color: #317AF7; }
+            .contentCss {
+                background: #000000;
+                color: white;
+            }
+
+            .hrefCss {
+                color: #317AF7;
+            }
         }
     </style>
+    <script>
+        const languages = {
+            "zh-CN": {
+                title: "敲木鱼 App 用户协议",
+                intro: "欢迎使用敲木鱼 App（以下简称“本 App”）。本协议是您（以下简称“用户”）与本 App 开发者（以下简称“我们”）之间关于使用本 App 的法律协议。请您在使用本 App 前仔细阅读本协议的全部内容。如您使用本 App，则视为您已同意接受本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本 App。",
+                service_title: "一、服务内容",
+                service_content: "本 App 为用户提供敲木鱼计数、播放音效和振动反馈等功能，旨在为用户提供便捷、有趣的敲木鱼体验。我们会尽力保证服务的稳定性和可靠性，但不保证服务不会中断或出现错误。",
+                account_title: "二、账号注册与使用",
+                account_content: "目前本 App 可能无需注册账号即可使用。如后续涉及账号注册，您应提供真实、准确、完整的个人信息，并及时更新这些信息以保持其真实性和有效性。您应对您账号下的所有活动和行为负责，包括但不限于使用 App 过程中产生的计数数据、音效设置等。如发现账号被盗用或存在安全问题，应立即通知我们。",
+                behavior_title: "三、用户行为规范",
+                behavior_1: "您在使用本 App 时应遵守法律法规和社会公德，不得利用本 App 进行任何违法、违规或不道德的活动。",
+                behavior_2: "不得对本 App 进行反向工程、反向编译、反汇编等操作，不得试图破解、修改或干扰 App 的正常运行。",
+                behavior_3: "不得利用本 App 发布、传播任何虚假、有害、侵权、淫秽、暴力等不良信息。",
+                behavior_4: "不得干扰或破坏本 App 的服务或其他用户的使用体验。",
+                ip_title: "四、知识产权",
+                ip_content: "本 App 及其包含的所有内容，包括但不限于软件代码、界面设计、图标、音效、文字说明等，均受知识产权法律法规的保护，其知识产权归我们所有。您仅可在本协议允许的范围内使用本 App，未经我们书面许可，不得复制、修改、传播、出售或出租本 App 的任何部分。",
+                privacy_title: "五、隐私与信息保护",
+                privacy_content: "我们重视您的隐私，将按照《敲木鱼 App 隐私政策》收集、使用和保护您的个人信息。请您仔细阅读隐私政策，以了解我们如何处理您的个人信息。",
+                change_title: "六、服务变更、中断或终止",
+                change_1: "我们可能会根据业务发展需要对本 App 的服务内容、功能等进行变更或调整，我们会尽可能提前通知您。",
+                change_2: "在以下情况下，我们可能会中断或终止服务：",
+                change_2_1: "因不可抗力、网络故障、系统维护等原因导致服务无法正常提供。",
+                change_2_2: "您违反本协议的规定，我们有权暂停或终止您对本 App 的使用。",
+                change_3: "服务终止后，除法律法规另有规定或本协议另有约定外，我们将不再对您承担任何责任。",
+                disclaimer_title: "七、免责声明",
+                disclaimer_1: "本 App 的服务是按照“现状”和“可获得”的基础提供的，我们不保证服务的绝对准确性、完整性、及时性、可靠性或适用性。",
+                disclaimer_2: "对于因使用本 App 或无法使用本 App 而导致的任何直接、间接、偶然、特殊或后果性的损害，我们不承担责任，除非这种损害是由我们的故意或重大过失造成的。",
+                modify_title: "八、协议的修改",
+                modify_content: "我们有权根据业务发展、法律法规变化等情况对本协议进行修改。修改后的协议将在 App 内公布，您继续使用本 App 即表示您同意接受修改后的协议。如您不同意修改后的协议，应停止使用本 App。",
+                law_title: "九、适用法律和争议解决",
+                law_content: "本协议适用中华人民共和国法律。如双方在本协议的履行过程中发生争议，应首先通过友好协商解决；协商不成的，任何一方均有权向有管辖权的人民法院提起诉讼。",
+                contact_title: "十、联系我们",
+                contact_content: "如果您对本协议有任何疑问或建议，请通过以下方式联系我们：",
+                email: "邮箱：[具体邮箱地址]"
+            },
+            "zh-TW": {
+                title: "敲木魚 App 用戶協議",
+                intro: "歡迎使用敲木魚 App（以下簡稱「本 App」）。本協議是您（以下簡稱「用戶」）與本 App 開發者（以下簡稱「我們」）之間關於使用本 App 的法律協議。請您在使用本 App 前仔細閱讀本協議的全部內容。如您使用本 App，則視為您已同意接受本協議的所有條款。如果您不同意本協議的任何條款，請不要使用本 App。",
+                service_title: "一、服務內容",
+                service_content: "本 App 為用戶提供敲木魚計數、播放音效和振動回饋等功能，旨在為用戶提供便捷、有趣的敲木魚體驗。我們會盡力保證服務的穩定性和可靠性，但不保證服務不會中斷或出現錯誤。",
+                account_title: "二、帳號註冊與使用",
+                account_content: "目前本 App 可能無需註冊帳號即可使用。如後續涉及帳號註冊，您應提供真實、準確、完整的個人資訊，並及時更新這些資訊以保持其真實性和有效性。您應對您帳號下的所有活動和行為負責，包括但不限於使用 App 過程中產生的計數資料、音效設定等。如發現帳號被盜用或存在安全問題，應立即通知我們。",
+                behavior_title: "三、用戶行為規範",
+                behavior_1: "您在使用本 App 時應遵守法律法規和社會公德，不得利用本 App 進行任何違法、違規或不道德的活動。",
+                behavior_2: "不得對本 App 進行反向工程、反向編譯、反組譯等操作，不得試圖破解、修改或干擾 App 的正常運行。",
+                behavior_3: "不得利用本 App 發佈、傳播任何虛假、有害、侵權、淫穢、暴力等不良資訊。",
+                behavior_4: "不得干擾或破壞本 App 的服務或其他用戶的使用體驗。",
+                ip_title: "四、智慧財產權",
+                ip_content: "本 App 及其包含的所有內容，包括但不限於軟體程式碼、界面設計、圖示、音效、文字說明等，均受智慧財產權法律法規的保護，其智慧財產權歸我們所有。您僅可在本協議允許的範圍內使用本 App，未經我們書面許可，不得複製、修改、傳播、出售或出租本 App 的任何部分。",
+                privacy_title: "五、隱私與資訊保護",
+                privacy_content: "我們重視您的隱私，將按照《敲木魚 App 隱私政策》收集、使用和保護您的個人資訊。請您仔細閱讀隱私政策，以了解我們如何處理您的個人資訊。",
+                change_title: "六、服務變更、中斷或終止",
+                change_1: "我們可能會根據業務發展需要對本 App 的服務內容、功能等進行變更或調整，我們會盡可能提前通知您。",
+                change_2: "在以下情況下，我們可能會中斷或終止服務：",
+                change_2_1: "因不可抗力、網路故障、系統維護等原因導致服務無法正常提供。",
+                change_2_2: "您違反本協議的規定，我們有權暫停或終止您對本 App 的使用。",
+                change_3: "服務終止後，除法律法規另有規定或本協議另有約定外，我們將不再對您承擔任何責任。",
+                disclaimer_title: "七、免責聲明",
+                disclaimer_1: "本 App 的服務是按照「現狀」和「可獲得」的基礎提供的，我們不保證服務的絕對準確性、完整性、及時性、可靠性或適用性。",
+                disclaimer_2: "對於因使用本 App 或無法使用本 App 而導致的任何直接、間接、偶然、特殊或後果性的損害，我們不承擔責任，除非這種損害是由我們的故意或重大過失造成的。",
+                modify_title: "八、協議的修改",
+                modify_content: "我們有權根據業務發展、法律法規變化等情況對本協議進行修改。修改後的協議將在 App 內公佈，您繼續使用本 App 即表示您同意接受修改後的協議。如您不同意修改後的協議，應停止使用本 App。",
+                law_title: "九、適用法律和爭議解決",
+                law_content: "本協議適用中華人民共和國法律。如雙方在本協議的履行過程中發生爭議，應首先通過友好協商解決；協商不成的，任何一方均有權向有管轄權的人民法院提起訴訟。",
+                contact_title: "十、聯繫我們",
+                contact_content: "如果您對本協議有任何疑問或建議，請通過以下方式聯繫我們：",
+                email: "信箱：[具體信箱地址]"
+            },
+            "en": {
+                title: "Knock the Wooden Fish App User Agreement",
+                intro: "Welcome to use the Knock the Wooden Fish App (hereinafter referred to as \"this App\"). This agreement is a legal agreement between you (hereinafter referred to as \"the user\") and the developer of this App (hereinafter referred to as \"we\") regarding the use of this App. Please read all the contents of this agreement carefully before using this App. If you use this App, it means that you have agreed to accept all the terms of this agreement. If you do not agree to any of the terms of this agreement, please do not use this App.",
+                service_title: "I. Service Content",
+                service_content: "This App provides users with functions such as counting the number of times they knock the wooden fish, playing sound effects, and vibration feedback, aiming to provide users with a convenient and interesting experience of knocking the wooden fish. We will try our best to ensure the stability and reliability of the service, but we do not guarantee that the service will not be interrupted or have errors.",
+                account_title: "II. Account Registration and Use",
+                account_content: "Currently, you may be able to use this App without registering an account. If account registration is involved in the future, you should provide true, accurate, and complete personal information and update this information in a timely manner to maintain its authenticity and validity. You are responsible for all activities and behaviors under your account, including but not limited to the counting data and sound effect settings generated during the use of the App. If you find that your account has been stolen or there are security issues, please notify us immediately.",
+                behavior_title: "III. User Behavior Norms",
+                behavior_1: "When using this App, you should abide by laws, regulations, and social ethics and shall not use this App to conduct any illegal,违规, or immoral activities.",
+                behavior_2: "You shall not conduct reverse engineering, reverse compilation, disassembly, etc. on this App, and shall not attempt to crack, modify, or interfere with the normal operation of the App.",
+                behavior_3: "You shall not use this App to publish or spread any false, harmful, infringing, obscene, violent, or other bad information.",
+                behavior_4: "You shall not interfere with or damage the service of this App or the user experience of other users.",
+                ip_title: "IV. Intellectual Property Rights",
+                ip_content: "This App and all its contents, including but not limited to software code, interface design, icons, sound effects, and text descriptions, are protected by intellectual property laws and regulations, and their intellectual property rights belong to us. You may only use this App within the scope permitted by this agreement. Without our written permission, you shall not copy, modify, spread, sell, or rent any part of this App.",
+                privacy_title: "V. Privacy and Information Protection",
+                privacy_content: "We value your privacy and will collect, use, and protect your personal information in accordance with the \"Knock the Wooden Fish App Privacy Policy\". Please read the privacy policy carefully to understand how we handle your personal information.",
+                change_title: "VI. Service Change, Interruption, or Termination",
+                change_1: "We may change or adjust the service content, functions, etc. of this App according to business development needs, and we will notify you in advance as much as possible.",
+                change_2: "In the following situations, we may interrupt or terminate the service:",
+                change_2_1: "The service cannot be provided normally due to force majeure, network failures, system maintenance, etc.",
+                change_2_2: "If you violate the provisions of this agreement, we have the right to suspend or terminate your use of this App.",
+                change_3: "After the service is terminated, unless otherwise provided by laws and regulations or otherwise agreed in this agreement, we will no longer be responsible for you.",
+                disclaimer_title: "VII. Disclaimer",
+                disclaimer_1: "The service of this App is provided on an \"as is\" and \"available\" basis. We do not guarantee the absolute accuracy, completeness, timeliness, reliability, or applicability of the service.",
+                disclaimer_2: "We are not responsible for any direct, indirect, accidental, special, or consequential damages caused by the use of this App or the inability to use this App, unless such damages are caused by our intentional or gross negligence.",
+                modify_title: "VIII. Modification of the Agreement",
+                modify_content: "We have the right to modify this agreement according to business development, changes in laws and regulations, etc. The modified agreement will be announced in the App. If you continue to use this App, it means that you agree to accept the modified agreement. If you do not agree to the modified agreement, you should stop using this App.",
+                law_title: "IX. Applicable Law and Dispute Resolution",
+                law_content: "This agreement is governed by the laws of the People's Republic of China. If a dispute arises between the two parties during the performance of this agreement, it should be resolved through friendly negotiation first; if negotiation fails, either party has the right to file a lawsuit with a people's court with jurisdiction.",
+                contact_title: "X. Contact Us",
+                contact_content: "If you have any questions or suggestions about this agreement, please contact us in the following way:",
+                email: "Email: [Specific Email Address]"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.title = languages[lang].title;
+            document.getElementById("intro").innerHTML = languages[lang].intro;
+            document.getElementById("service_title").innerHTML = languages[lang].service_title;
+            document.getElementById("service_content").innerHTML = languages[lang].service_content;
+            document.getElementById("account_title").innerHTML = languages[lang].account_title;
+            document.getElementById("account_content").innerHTML = languages[lang].account_content;
+            document.getElementById("behavior_title").innerHTML = languages[lang].behavior_title;
+            document.getElementById("behavior_1").innerHTML = languages[lang].behavior_1;
+            document.getElementById("behavior_2").innerHTML = languages[lang].behavior_2;
+            document.getElementById("behavior_3").innerHTML = languages[lang].behavior_3;
+            document.getElementById("behavior_4").innerHTML = languages[lang].behavior_4;
+            document.getElementById("ip_title").innerHTML = languages[lang].ip_title;
+            document.getElementById("ip_content").innerHTML = languages[lang].ip_content;
+            document.getElementById("privacy_title").innerHTML = languages[lang].privacy_title;
+            document.getElementById("privacy_content").innerHTML = languages[lang].privacy_content;
+            document.getElementById("change_title").innerHTML = languages[lang].change_title;
+            document.getElementById("change_1").innerHTML = languages[lang].change_1;
+            document.getElementById("change_2").innerHTML = languages[lang].change_2;
+            document.getElementById("change_2_1").innerHTML = languages[lang].change_2_1;
+            document.getElementById("change_2_2").innerHTML = languages[lang].change_2_2;
+            document.getElementById("change_3").innerHTML = languages[lang].change_3;
+            document.getElementById("disclaimer_title").innerHTML = languages[lang].disclaimer_title;
+            document.getElementById("disclaimer_1").innerHTML = languages[lang].disclaimer_1;
+            document.getElementById("disclaimer_2").innerHTML = languages[lang].disclaimer_2;
+            document.getElementById("modify_title").innerHTML = languages[lang].modify_title;
+            document.getElementById("modify_content").innerHTML = languages[lang].modify_content;
+            document.getElementById("law_title").innerHTML = languages[lang].law_title;
+            document.getElementById("law_content").innerHTML = languages[lang].law_content;
+            document.getElementById("contact_title").innerHTML = languages[lang].contact_title;
+            document.getElementById("contact_content").innerHTML = languages[lang].contact_content;
+            document.getElementById("email").innerHTML = languages[lang].email;
+        }
+
+        // 页面加载时读取 URL 参数并设置默认语言
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            if (lang && languages[lang]) {
+                changeLanguage(lang);
+            }
+        };
+    </script>
 </head>
 
 <body class="contentCss">
-<h1>敲木鱼 App 用户协议</h1>
-<p>欢迎使用敲木鱼 App（以下简称“本 App”）。本协议是您（以下简称“用户”）与本 App 开发者（以下简称“我们”）之间关于使用本 App 的法律协议。请您在使用本 App 前仔细阅读本协议的全部内容。如您使用本 App，则视为您已同意接受本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本 App。</p>
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <button onclick="changeLanguage('zh-CN')">简体中文</button>
+        <button onclick="changeLanguage('zh-TW')">繁体中文</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+    <h1 id="title">敲木鱼 App 用户协议</h1>
+    <p id="intro">欢迎使用敲木鱼 App（以下简称“本 App”）。本协议是您（以下简称“用户”）与本 App 开发者（以下简称“我们”）之间关于使用本 App 的法律协议。请您在使用本 App 前仔细阅读本协议的全部内容。如您使用本 App，则视为您已同意接受本协议的所有条款。如果您不同意本协议的任何条款，请不要使用本 App。</p>
 
-<h2>一、服务内容</h2>
-<p>本 App 为用户提供敲木鱼计数、播放音效和振动反馈等功能，旨在为用户提供便捷、有趣的敲木鱼体验。我们会尽力保证服务的稳定性和可靠性，但不保证服务不会中断或出现错误。</p>
+    <h2 id="service_title">一、服务内容</h2>
+    <p id="service_content">本 App 为用户提供敲木鱼计数、播放音效和振动反馈等功能，旨在为用户提供便捷、有趣的敲木鱼体验。我们会尽力保证服务的稳定性和可靠性，但不保证服务不会中断或出现错误。</p>
 
-<h2>二、账号注册与使用</h2>
-<p>目前本 App 可能无需注册账号即可使用。如后续涉及账号注册，您应提供真实、准确、完整的个人信息，并及时更新这些信息以保持其真实性和有效性。您应对您账号下的所有活动和行为负责，包括但不限于使用 App 过程中产生的计数数据、音效设置等。如发现账号被盗用或存在安全问题，应立即通知我们。</p>
+    <h2 id="account_title">二、账号注册与使用</h2>
+    <p id="account_content">目前本 App 可能无需注册账号即可使用。如后续涉及账号注册，您应提供真实、准确、完整的个人信息，并及时更新这些信息以保持其真实性和有效性。您应对您账号下的所有活动和行为负责，包括但不限于使用 App 过程中产生的计数数据、音效设置等。如发现账号被盗用或存在安全问题，应立即通知我们。</p>
 
-<h2>三、用户行为规范</h2>
-<ol>
-    <li>您在使用本 App 时应遵守法律法规和社会公德，不得利用本 App 进行任何违法、违规或不道德的活动。</li>
-    <li>不得对本 App 进行反向工程、反向编译、反汇编等操作，不得试图破解、修改或干扰 App 的正常运行。</li>
-    <li>不得利用本 App 发布、传播任何虚假、有害、侵权、淫秽、暴力等不良信息。</li>
-    <li>不得干扰或破坏本 App 的服务或其他用户的使用体验。</li>
-</ol>
+    <h2 id="behavior_title">三、用户行为规范</h2>
+    <ol>
+        <li id="behavior_1">您在使用本 App 时应遵守法律法规和社会公德，不得利用本 App 进行任何违法、违规或不道德的活动。</li>
+        <li id="behavior_2">不得对本 App 进行反向工程、反向编译、反汇编等操作，不得试图破解、修改或干扰 App 的正常运行。</li>
+        <li id="behavior_3">不得利用本 App 发布、传播任何虚假、有害、侵权、淫秽、暴力等不良信息。</li>
+        <li id="behavior_4">不得干扰或破坏本 App 的服务或其他用户的使用体验。</li>
+    </ol>
 
-<h2>四、知识产权</h2>
-<p>本 App 及其包含的所有内容，包括但不限于软件代码、界面设计、图标、音效、文字说明等，均受知识产权法律法规的保护，其知识产权归我们所有。您仅可在本协议允许的范围内使用本 App，未经我们书面许可，不得复制、修改、传播、出售或出租本 App 的任何部分。</p>
+    <h2 id="ip_title">四、知识产权</h2>
+    <p id="ip_content">本 App 及其包含的所有内容，包括但不限于软件代码、界面设计、图标、音效、文字说明等，均受知识产权法律法规的保护，其知识产权归我们所有。您仅可在本协议允许的范围内使用本 App，未经我们书面许可，不得复制、修改、传播、出售或出租本 App 的任何部分。</p>
 
-<h2>五、隐私与信息保护</h2>
-<p>我们重视您的隐私，将按照《敲木鱼 App 隐私政策》收集、使用和保护您的个人信息。请您仔细阅读隐私政策，以了解我们如何处理您的个人信息。</p>
+    <h2 id="privacy_title">五、隐私与信息保护</h2>
+    <p id="privacy_content">我们重视您的隐私，将按照《敲木鱼 App 隐私政策》收集、使用和保护您的个人信息。请您仔细阅读隐私政策，以了解我们如何处理您的个人信息。</p>
 
-<h2>六、服务变更、中断或终止</h2>
-<ol>
-    <li>我们可能会根据业务发展需要对本 App 的服务内容、功能等进行变更或调整，我们会尽可能提前通知您。</li>
-    <li>在以下情况下，我们可能会中断或终止服务：</li>
-    <ul>
-        <li>因不可抗力、网络故障、系统维护等原因导致服务无法正常提供。</li>
-        <li>您违反本协议的规定，我们有权暂停或终止您对本 App 的使用。</li>
-    </ul>
-    <li>服务终止后，除法律法规另有规定或本协议另有约定外，我们将不再对您承担任何责任。</li>
-</ol>
+    <h2 id="change_title">六、服务变更、中断或终止</h2>
+    <ol>
+        <li id="change_1">我们可能会根据业务发展需要对本 App 的服务内容、功能等进行变更或调整，我们会尽可能提前通知您。</li>
+        <li id="change_2">在以下情况下，我们可能会中断或终止服务：</li>
+        <ul>
+            <li id="change_2_1">因不可抗力、网络故障、系统维护等原因导致服务无法正常提供。</li>
+            <li id="change_2_2">您违反本协议的规定，我们有权暂停或终止您对本 App 的使用。</li>
+        </ul>
+        <li id="change_3">服务终止后，除法律法规另有规定或本协议另有约定外，我们将不再对您承担任何责任。</li>
+    </ol>
 
-<h2>七、免责声明</h2>
-<ol>
-    <li>本 App 的服务是按照“现状”和“可获得”的基础提供的，我们不保证服务的绝对准确性、完整性、及时性、可靠性或适用性。</li>
-    <li>对于因使用本 App 或无法使用本 App 而导致的任何直接、间接、偶然、特殊或后果性的损害，我们不承担责任，除非这种损害是由我们的故意或重大过失造成的。</li>
-</ol>
+    <h2 id="disclaimer_title">七、免责声明</h2>
+    <ol>
+        <li id="disclaimer_1">本 App 的服务是按照“现状”和“可获得”的基础提供的，我们不保证服务的绝对准确性、完整性、及时性、可靠性或适用性。</li>
+        <li id="disclaimer_2">对于因使用本 App 或无法使用本 App 而导致的任何直接、间接、偶然、特殊或后果性的损害，我们不承担责任，除非这种损害是由我们的故意或重大过失造成的。</li>
+    </ol>
 
-<h2>八、协议的修改</h2>
-<p>我们有权根据业务发展、法律法规变化等情况对本协议进行修改。修改后的协议将在 App 内公布，您继续使用本 App 即表示您同意接受修改后的协议。如您不同意修改后的协议，应停止使用本 App。</p>
+    <h2 id="modify_title">八、协议的修改</h2>
+    <p id="modify_content">我们有权根据业务发展、法律法规变化等情况对本协议进行修改。修改后的协议将在 App 内公布，您继续使用本 App 即表示您同意接受修改后的协议。如您不同意修改后的协议，应停止使用本 App。</p>
 
-<h2>九、适用法律和争议解决</h2>
-<p>本协议适用中华人民共和国法律。如双方在本协议的履行过程中发生争议，应首先通过友好协商解决；协商不成的，任何一方均有权向有管辖权的人民法院提起诉讼。</p>
+    <h2 id="law_title">九、适用法律和争议解决</h2>
+    <p id="law_content">本协议适用中华人民共和国法律。如双方在本协议的履行过程中发生争议，应首先通过友好协商解决；协商不成的，任何一方均有权向有管辖权的人民法院提起诉讼。</p>
 
-<h2>十、联系我们</h2>
-<p>如果您对本协议有任何疑问或建议，请通过以下方式联系我们：</p>
-<p>邮箱：[具体邮箱地址]</p>
+    <h2 id="contact_title">十、联系我们</h2>
+    <p id="contact_content">如果您对本协议有任何疑问或建议，请通过以下方式联系我们：</p>
+    <p id="email">邮箱：[具体邮箱地址]</p>
 </body>
 
 </html>
